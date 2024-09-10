@@ -2,7 +2,7 @@
 	import '../app.postcss';
 
 	// Skeleton Components
-	import { AppBar } from '@skeletonlabs/skeleton';
+	import AppBar from '../components/AppBar.svelte'; // If `components` is located one level up from `+layout.svelte`
 
 	// Highlight JS
 	import hljs from 'highlight.js/lib/core';
@@ -26,11 +26,6 @@
 </script>
 
 <div>
-	<AppBar gridColumns="grid-cols-3" slotDefault="place-self-center" slotTrail="place-content-end">
-		<svelte:fragment slot="lead">(icon)</svelte:fragment>
-		(title)
-		<svelte:fragment slot="trail">(actions)</svelte:fragment>
-	</AppBar>
-
+	<AppBar />
 	<slot />
 </div>
